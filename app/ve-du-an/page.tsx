@@ -91,7 +91,6 @@ export default function VeDuAn() {
                   <li>Văn kiện, nghị quyết và tài liệu chính thức của Đảng và Nhà nước liên quan đến thể chế kinh tế thị trường ở Việt Nam.</li>
                   <li>Tài liệu kỹ thuật: Next.js, React, Tailwind CSS, Framer Motion, Lucide Icons, Google AI (Gemini).</li>
                 </ul>
-                <p className="text-sm text-gray-500 mt-3">Ghi chú: Danh mục sẽ được bổ sung/cập nhật theo yêu cầu và trong quá trình hoàn thiện.</p>
               </div>
             </div>
           </motion.div>
