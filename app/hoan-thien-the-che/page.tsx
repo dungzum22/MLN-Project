@@ -90,7 +90,7 @@ export default function HoanThienTheChe() {
           </Link>
 
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-orange-700 rounded-2xl flex items-center justify-center text-white shadow-lg">
+            <div className="w-16 h-16 bg-linear-to-br from-red-600 to-orange-700 rounded-2xl flex items-center justify-center text-white shadow-lg">
               <Scale className="w-8 h-8" />
             </div>
             <div>
@@ -121,7 +121,7 @@ export default function HoanThienTheChe() {
                 Nhằm hướng tới xác lập đồng bộ các yếu tố thị trường, các loại thị trường hiện đại theo hướng góp phần thúc đẩy <span className="font-semibold">dân giàu, nước mạnh, dân chủ, công bằng, văn minh</span>.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 flex items-center justify-center">
+            <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-6 flex items-center justify-center">
               <BalanceIllustration />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function HoanThienTheChe() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-effect rounded-2xl p-8 mb-8 bg-gradient-to-br from-red-50 to-orange-50"
+          className="glass-effect rounded-2xl p-8 mb-8 bg-linear-to-br from-red-50 to-orange-50"
         >
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Một số hạn chế cần khắc phục</h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -168,9 +168,9 @@ export default function HoanThienTheChe() {
               className="glass-effect rounded-2xl overflow-hidden"
             >
               {/* Header */}
-              <div className={`bg-gradient-to-r ${section.color} p-6`}>
+              <div className={`bg-linear-to-r ${section.color} p-6`}>
                 <div className="flex items-center gap-4 text-white">
-                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shrink-0">
                     {section.icon}
                   </div>
                   <h2 className="text-2xl font-bold">
@@ -190,9 +190,9 @@ export default function HoanThienTheChe() {
                       viewport={{ once: true }}
                       transition={{ delay: itemIndex * 0.05 }}
                       whileHover={{ x: 5 }}
-                      className="flex items-center gap-3 p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl hover:shadow-md transition-all"
+                      className="flex items-center gap-3 p-4 bg-linear-to-r from-gray-50 to-blue-50 rounded-xl hover:shadow-md transition-all"
                     >
-                      <div className={`w-8 h-8 bg-gradient-to-br ${section.color} rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
+                      <div className={`w-8 h-8 bg-linear-to-br ${section.color} rounded-lg flex items-center justify-center text-white font-bold text-sm shrink-0`}>
                         {itemIndex + 1}
                       </div>
                       <p className="text-gray-700 leading-relaxed">
@@ -201,10 +201,57 @@ export default function HoanThienTheChe() {
                     </motion.div>
                   ))}
                 </div>
+
+                {/* Ví dụ thực tiễn theo từng mục */}
+                {index === 1 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Luật Doanh nghiệp (2014, 2020) đơn giản hóa thủ tục đăng ký, cắt giảm điều kiện kinh doanh, thúc đẩy cạnh tranh lành mạnh.</li>
+                      <li>Chuyển từ cơ chế “xin – cho” sang điều hành theo pháp quyền và minh bạch, tạo sân chơi bình đẳng giữa các thành phần kinh tế.</li>
+                    </ul>
+                  </div>
+                )}
+
+                {index === 3 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Việt Nam gia nhập WTO (2007), ký CPTPP (2018) và EVFTA (2020) – mở rộng thị trường, chuẩn hóa thể chế theo cam kết quốc tế.</li>
+                      <li>Xuất khẩu tăng nhanh, tham gia sâu chuỗi cung ứng toàn cầu ở điện tử, dệt may, nông sản.</li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Xu hướng mới: Kinh tế số, Kinh tế xanh */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 glass-effect rounded-2xl p-8"
+        >
+          <h2 className="text-2xl font-bold mb-4 text-gray-800">Xu hướng mới: Kinh tế số, Kinh tế xanh</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-4 bg-linear-to-br from-gray-50 to-blue-50 rounded-xl">
+              <h3 className="font-semibold text-gray-800 mb-2">Kinh tế số</h3>
+              <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                <li>Chuyển đổi số quốc gia, phát triển định danh số VNeID.</li>
+                <li>Hệ sinh thái thanh toán số: MoMo, VNPay…; nền tảng quản trị Base.vn.</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-linear-to-br from-gray-50 to-green-50 rounded-xl">
+              <h3 className="font-semibold text-gray-800 mb-2">Kinh tế xanh</h3>
+              <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                <li>Mục tiêu Net Zero 2050; hoàn thiện thể chế năng lượng tái tạo.</li>
+                <li>Phát triển điện gió, điện mặt trời tại Ninh Thuận, Bình Thuận và một số địa phương khác.</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Conclusion */}
         <motion.div

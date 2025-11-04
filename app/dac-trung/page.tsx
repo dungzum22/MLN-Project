@@ -88,7 +88,7 @@ export default function DacTrung() {
           </Link>
 
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+            <div className="w-16 h-16 bg-linear-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
               <TrendingUp className="w-8 h-8" />
             </div>
             <div>
@@ -115,7 +115,7 @@ export default function DacTrung() {
                 Nền kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam có những <span className="font-semibold text-orange-600">đặc trưng riêng</span> phản ánh điều kiện lịch sử, trình độ phát triển và hoàn cảnh chính trị - xã hội của đất nước.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6">
+            <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-xl p-6">
               <ChartIllustration />
             </div>
           </div>
@@ -133,9 +133,9 @@ export default function DacTrung() {
               className="glass-effect rounded-2xl overflow-hidden card-hover"
             >
               {/* Header */}
-              <div className={`bg-gradient-to-r ${char.color} p-6`}>
+              <div className={`bg-linear-to-r ${char.color} p-6`}>
                 <div className="flex items-center gap-4 text-white">
-                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shrink-0">
                     {char.icon}
                   </div>
                   <h2 className="text-2xl font-bold">
@@ -155,15 +155,60 @@ export default function DacTrung() {
                       viewport={{ once: true }}
                       transition={{ delay: itemIndex * 0.05 }}
                       whileHover={{ x: 5 }}
-                      className="flex items-start gap-3 p-4 bg-gradient-to-r from-gray-50 to-orange-50 rounded-xl hover:shadow-md transition-all"
+                      className="flex items-start gap-3 p-4 bg-linear-to-r from-gray-50 to-orange-50 rounded-xl hover:shadow-md transition-all"
                     >
-                      <div className={`w-2 h-2 bg-gradient-to-br ${char.color} rounded-full mt-2 flex-shrink-0`} />
+                      <div className={`w-2 h-2 bg-linear-to-br ${char.color} rounded-full mt-2 shrink-0`} />
                       <p className="text-gray-700 leading-relaxed">
                         {item}
                       </p>
                     </motion.div>
                   ))}
                 </div>
+
+                {/* Ví dụ thực tiễn theo từng mục */}
+                {index === 0 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Sau Đổi mới (1986), Nhà nước trao quyền tự chủ cho hộ nông dân; Khoán 10 (1988) tạo động lực mạnh cho sản xuất nông nghiệp.</li>
+                      <li>Năng suất và sản lượng lúa tăng nhanh, Việt Nam từ nước thiếu lương thực trở thành một trong các quốc gia xuất khẩu gạo hàng đầu thế giới.</li>
+                      <li>Thị trường hóa đầu vào – đầu ra nông sản khuyến khích ứng dụng giống mới, cơ giới hóa, và liên kết chuỗi giá trị.</li>
+                    </ul>
+                  </div>
+                )}
+
+                {index === 1 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Kinh tế nhà nước: Petrovietnam, EVN, Vinacomin giữ vai trò chủ đạo trong năng lượng, dầu khí, than – điện, hạ tầng thiết yếu.</li>
+                      <li>Kinh tế tư nhân: Vingroup, Thaco, Tân Hiệp Phát, FPT trở thành động lực quan trọng, đóng góp lớn cho tăng trưởng, việc làm và đổi mới sáng tạo.</li>
+                      <li>Môi trường đa sở hữu cho phép các thành phần hợp tác – cạnh tranh lành mạnh, bổ sung thế mạnh lẫn nhau.</li>
+                    </ul>
+                  </div>
+                )}
+
+                {index === 2 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Luật Doanh nghiệp (2014, 2020) đơn giản hóa thủ tục, mở rộng quyền tự do kinh doanh, tăng tính minh bạch.</li>
+                      <li>Chuyển từ cơ chế “xin – cho” sang quản lý bằng pháp luật, chiến lược, quy hoạch, chính sách dựa trên nguyên tắc thị trường.</li>
+                      <li>Cải thiện chỉ số môi trường kinh doanh và năng lực cạnh tranh, khuyến khích khởi nghiệp – đổi mới sáng tạo.</li>
+                    </ul>
+                  </div>
+                )}
+
+                {index === 4 && (
+                  <div className="mt-5 p-4 bg-white rounded-xl border border-orange-100">
+                    <h3 className="font-semibold text-gray-800 mb-2">Ví dụ thực tiễn</h3>
+                    <ul className="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+                      <li>Chương trình 135, Nghị quyết 30a và các chính sách giảm nghèo bền vững giúp hàng triệu hộ thoát nghèo.</li>
+                      <li>Phát triển bảo hiểm y tế toàn dân với tỷ lệ bao phủ trên 90%, mở rộng tiếp cận dịch vụ y tế – giáo dục cơ bản.</li>
+                      <li>Chính sách an sinh, phúc lợi xã hội được tăng cường song hành cùng tăng trưởng kinh tế.</li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -174,7 +219,7 @@ export default function DacTrung() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 glass-effect rounded-2xl p-8 bg-gradient-to-br from-orange-50 to-amber-50"
+          className="mt-12 glass-effect rounded-2xl p-8 bg-linear-to-br from-orange-50 to-amber-50"
         >
           <h2 className="text-2xl font-bold mb-4 text-gray-800">Kết luận</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
